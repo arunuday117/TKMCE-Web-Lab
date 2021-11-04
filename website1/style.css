@@ -1,0 +1,42 @@
+body{
+    background-color: #edf59e;
+    font-family: Arial;
+}
+
+.table1{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+.table1 tr{
+    background-color: rgb(107, 171, 201);
+    text-align: center;
+    color: rgb(104, 48, 32);
+    font-size: 15px;
+}
+
+.basic_info{
+    padding: 20px;
+}
+
+img{
+    width: 30%;
+}
+
+.table3{
+    margin: 20px;
+}
+
+.table4{
+    margin: 20px;
+}
+
+.table4 tr td{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
