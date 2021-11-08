@@ -1,0 +1,10 @@
+body{
+    background:  url("bg.jpeg");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form{
+    background-color: rgb(56, 52, 52);
+}
