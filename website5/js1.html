@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background: url("back.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            display: block;
+            margin: 30px;
+            transform: translate(0%, 60%);
+            border: 1px solid black;
+            padding: 30px;
+            border-radius: 20px;
+            background-color:rgb(152 10 154 / 40%); 
+        }
+        h4 {
+            color: #d3aac4ed;
+            transform: translate(40%, 10%);
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        h3 {
+            color: #d3aac4ed;
+            transform: translate(43%, 10%);
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        .input {
+            padding: 20px;
+            transform: translate(30%, 10%);
+        }
+        .button {
+            transform: translate(35%, 10%);
+            margin: 20px;
+        }
+        div#result {
+            padding: 10px;
+            transform: translate(45%, 10%);
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+
+<!--calculator-->
+<div class="container">
+    <h4>Calculator</h4>
+    <div class="input">
+        <input type="number" id="num1" name="num1" placeholder="Number 1">
+        <input type="number" id="num2" name="num2" placeholder="Number 2">
+    </div>
+    <div class="button">
+        <button type="submit" onclick="add()" name="add">Add</button>
+        <button type="submit" onclick="sub()" name="subtract">Subtract</button>
+        <button type="submit" onclick="mult()" name="multiply">Multiply</button>
+        <button type="submit" onclick="div()" name="divide">Divide</button>
+    </div>
+    <h3>Result</h3>
+    <div id="result">
+    </div>
+</div>
+
+<script>
+    function add(){
+        var num1=parseInt(document.getElementById("num1").value);
+        var num2=parseInt(document.getElementById("num2").value);
+        var sum=num1+num2;
+        document.getElementById("result").innerHTML=sum;  
+    }
+    function sub(){
+        var num1=parseInt(document.getElementById("num1").value);
+        var num2=parseInt(document.getElementById("num2").value);
+        var sum=num1-num2;
+        document.getElementById("result").innerHTML=sum;  
+    }
+    function div(){
+        var num1=parseInt(document.getElementById("num1").value);
+        var num2=parseInt(document.getElementById("num2").value);
+        var sum=num1/num2;
+        document.getElementById("result").innerHTML=sum;  
+    }
+    function mult(){
+        var num1=parseInt(document.getElementById("num1").value);
+        var num2=parseInt(document.getElementById("num2").value);
+        var sum=num1*num2;
+        document.getElementById("result").innerHTML=sum;  
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background: url("back.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            display: block;
+            margin: 30px;
+            transform: translate(0%, 60%);
+            border: 1px solid black;
+            padding: 30px;
+            border-radius: 20px;
+            background-color:rgb(152 10 154 / 40%); 
+        }
+        h4 {
+            color: #d3aac4ed;
+            transform: translate(40%, 10%);
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        h3 {
+            color: #d3aac4ed;
+            transform: translate(43%, 10%);
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        .input {
+            padding: 20px;
+            transform: translate(30%, 10%);
+        }
+        .button {
+            transform: translate(35%, 10%);
+            margin: 20px;
+        }
+        div#result {
+            padding: 10px;
+            transform: translate(45%, 10%);
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+
+<!--calculator-->
+<div class="container">
+    <h4>Dollar to Rupees</h4>
+    <div class="input">
+        <input type="number" id="num1" name="num1" placeholder="Enter Dollars">
+        <input type="text" id="num2" name="num2" value="" placeholder="Enter rupee">
+    </div>
+    <div class="button">
+        <button type="submit" onclick="convert()" name="add">Add</button>
+    </div>
+</div>
+
+<script>
+    function convert(){
+        var num1=parseInt(document.getElementById("num1").value);
+        var rup=num1*74;
+        document.getElementById("num2").innerHTML=rup;  
+    }
+</script>
+</body>
+</html>
