@@ -3,47 +3,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <title>Calculator</title>
     <style>
         body{
             background: url("back.jpg");
             background-repeat: no-repeat;
+            font-family: 'Poppins', sans-serif;
             background-size: cover;
+            display: flex;
+            justify-content: center;
         }
         .container {
-            display: block;
-            margin: 30px;
-            transform: translate(0%, 60%);
-            border: 1px solid black;
-            padding: 30px;
+            margin: 20px;
+            padding: 90px;
+            width: 100%;
+            background-color: rgb(178 202 214 / 61%);
+            border: 0px;
+            display: inline;
             border-radius: 20px;
-            background-color:rgb(152 10 154 / 40%); 
+        }
+        .form {
+            display: block;
+            padding: 30px;
+            text-align: center;
+            text-transform: uppercase;
         }
         h4 {
-            color: #d3aac4ed;
-            transform: translate(40%, 10%);
-            font-size: 25px;
-            text-transform: uppercase;
+            text-align: center;
+            font-size: 28px;
+            color: #f5f5f5;
+            font-weight: bold;
         }
-        h3 {
-            color: #d3aac4ed;
-            transform: translate(43%, 10%);
-            font-size: 25px;
-            text-transform: uppercase;
+        .input{
+            text-align: center;
+            margin-bottom: 70px;
         }
-        .input {
+        input[type="number"]{
+            width: 200px;
+            height: 30px;
+            border: 0px;
             padding: 20px;
-            transform: translate(30%, 10%);
+            border-radius: 10px;
+            margin-right: 20px;
+            color: #FFF;
+            background-color: rgb(5 124 180 / 30%);
         }
-        .button {
-            transform: translate(35%, 10%);
-            margin: 20px;
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
         }
-        div#result {
-            padding: 10px;
-            transform: translate(45%, 10%);
-            color: white;
-
+        input[type="number"]::placeholder{
+            color: #FFF;
+        }
+        button{
+            width: 450px;
+            height: 40px;
+            margin: 10px;
+            border: 0px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 900;
+            color: #111f64b3;
+        }
+        button:hover{
+            background-color: #dbd2d2;
+        }
+        h3{
+            font-size: 28px;
+            color: #f5f5f5;
+            font-weight: bold;
+            margin-right: 100px;
+        }
+        .result{
+            text-align: center;
+            color: #3b4e64;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+        p{
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -51,19 +95,22 @@
 
 <!--calculator-->
 <div class="container">
-    <h4>Calculator</h4>
-    <div class="input">
-        <input type="number" id="num1" name="num1" placeholder="Number 1">
-        <input type="number" id="num2" name="num2" placeholder="Number 2">
-    </div>
-    <div class="button">
-        <button type="submit" onclick="add()" name="add">Add</button>
-        <button type="submit" onclick="sub()" name="subtract">Subtract</button>
-        <button type="submit" onclick="mult()" name="multiply">Multiply</button>
-        <button type="submit" onclick="div()" name="divide">Divide</button>
-    </div>
-    <h3>Result</h3>
-    <div id="result">
+    <div class="form">
+        <h4>Calculator</h4>
+        <div class="input">
+            <input type="number" id="num1" name="num1" placeholder="Number 1">
+            <input type="number" id="num2" name="num2" placeholder="Number 2">
+        </div>
+        <div class="button">
+            <button type="submit" onclick="add()" name="add">Add</button>
+            <button type="submit" onclick="sub()" name="subtract">Subtract</button>
+            <button type="submit" onclick="mult()" name="multiply">Multiply</button>
+            <button type="submit" onclick="div()" name="divide">Divide</button>
+        </div>
+        <div class="result">
+            <h3>Result</h3>
+            <p id="result"></p>
+        </div>
     </div>
 </div>
 
