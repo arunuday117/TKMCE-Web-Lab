@@ -96,6 +96,10 @@
                         <td>Padding at begining of string : </td>
                         <td><span id="out10"></span></td>
                     </tr>
+                    <tr>
+                        <td>Padding at end of string : </td>
+                        <td><span id="out11"></span></td>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -130,6 +134,8 @@
         document.getElementById("out9").innerHTML=in1.concat(" ",in8);
         out7=in1.padStart(30,in9);
         document.getElementById("out10").innerHTML=out7;
+        out8=in1.padEnd(30,in9);
+        document.getElementById("out11").innerHTML=out8;
     }
 </script>
 </body>
