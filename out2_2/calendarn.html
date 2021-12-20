@@ -21,6 +21,9 @@
         font-weight: bold;
         background-color: #E6E6E6;
         }
+        .container{
+            display:none;
+        }
     </style>
 </head>
 <body>
@@ -28,7 +31,7 @@
         <label class="enter">Enter the year</label>
         <input type="tel" name="input" id="input">
         <input type="hidden" name="hidden" id="hidden">
-        <input type="button" value="View" onclick="cal();" id="submit">
+        <input type="button" value="View" onclick="cal()" id="submit">
     </div>
     <div class="container">
         <div class="calendar">
@@ -40,12 +43,13 @@
                 </div>
             </div>
             <div id="days"></div>   
-            <a href="#" id="prev">Next</a>
-            <a href="#" id="next">Previous</a>       
+            <a href="#" id="prev">Previous</a>
+            <a href="#" id="next">Next</a>       
         </div>
     </div>
     <script>
         function cal(){
+            document.querySelector('.container');
             var s = document.getElementById('input').value;
             var d = new Date(s);
             var num=0;
@@ -81,6 +85,7 @@
             }
             td+=`</tr></table>`;
             days.innerHTML=td;
+            document.querySelector('.container').style.display="block";
         }
         document.querySelector('#prev').addEventListener('click',()=>{
             d=document.getElementById('hidden').value;
